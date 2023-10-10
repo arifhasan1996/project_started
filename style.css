@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300&family=Montserrat:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+
+.panel{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 0.5;
+    cursor: pointer;
+    position: relative;
+    height: 90vh;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    /* overflow: hidden; */
+    margin: 10px;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+}
